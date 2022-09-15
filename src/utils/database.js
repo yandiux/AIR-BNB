@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize');
+{ Sequelize } = require('sequelize');
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 // Create a connection to database
@@ -7,7 +7,7 @@ const db = new Sequelize({
   host: process.env.DB_HOST,
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  database: process.env.DB,
+  database: process.env.DB,const
   logging: false,
   dialectOptions:
     process.env.NODE_ENV === 'production'
@@ -19,3 +19,4 @@ const db = new Sequelize({
         }
       : {},
 });
+module.exports = { db };
